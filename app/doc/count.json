@@ -1,0 +1,152 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Charcount API",
+    "description": "A char counting API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:4567",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Count",
+      "description": "API for counting chars in a string"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/count": {
+      "get": {
+        "tags": [
+          "Count"
+        ],
+        "description": "Counts the different chars appearance in the input string",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "query",
+            "required": true,
+            "description": "The input string",
+            "type": "string"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The character appearance count",
+            "schema": {
+              "$ref": "#/definitions/Count"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Count": {
+      "properties": {
+        "a": {
+          "type": "integer"
+        },
+        "b": {
+          "type": "integer"
+        },
+        "c": {
+          "type": "integer"
+        },
+        "d": {
+          "type": "integer"
+        },
+        "e": {
+          "type": "integer"
+        },
+        "f": {
+          "type": "integer"
+        },
+        "g": {
+          "type": "integer"
+        },
+        "h": {
+          "type": "integer"
+        },
+        "i": {
+          "type": "integer"
+        },
+        "j": {
+          "type": "integer"
+        },
+        "k": {
+          "type": "integer"
+        },
+        "l": {
+          "type": "integer"
+        },
+        "m": {
+          "type": "integer"
+        },
+        "n": {
+          "type": "integer"
+        },
+        "o": {
+          "type": "integer"
+        },
+        "p": {
+          "type": "integer"
+        },
+        "q": {
+          "type": "integer"
+        },
+        "r": {
+          "type": "integer"
+        },
+        "s": {
+          "type": "integer"
+        },
+        "t": {
+          "type": "integer"
+        },
+        "u": {
+          "type": "integer"
+        },
+        "v": {
+          "type": "integer"
+        },
+        "w": {
+          "type": "integer"
+        },
+        "x": {
+          "type": "integer"
+        },
+        "y": {
+          "type": "integer"
+        },
+        "z": {
+          "type": "integer"
+        }
+      },
+      "example": {
+        "h": 1,
+        "e": 1,
+        "l": 3,
+        "o": 2,
+        "w": 1,
+        "r": 1,
+        "d": 1
+      }
+    }
+  }
+}

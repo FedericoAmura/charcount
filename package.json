@@ -1,0 +1,36 @@
+{
+  "name": "auth0-eng-camp-exercise",
+  "version": "1.0.0",
+  "description": "Exercise to be solved by Camp applicants",
+  "scripts": {
+    "start": "node ./app/bin/www",
+    "stop": "killall -SIGINT charcount",
+    "debug": "nodemon --inspect=56745 ./app/bin/www",
+    "integration-test": "mocha --exit",
+    "test": "npm start & npm run integration-test; npm stop"
+  },
+  "keywords": [
+    "character",
+    "count",
+    "auth0",
+    "test",
+    "exercise"
+  ],
+  "author": "Federico L. Amura",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chakram": "^1.5.0",
+    "eslint": "^4.14.0",
+    "mocha": "^4.1.0",
+    "nodemon": "^1.14.11",
+    "request-async": "^0.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.0",
+    "swagger-ui-express": "^2.0.14"
+  }
+}

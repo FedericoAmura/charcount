@@ -1,0 +1,3 @@
+FROM count:base
+
+ADD app /home/count/app

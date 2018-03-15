@@ -1,0 +1,3 @@
+FROM count:base
+
+RUN npm install

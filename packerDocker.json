@@ -1,0 +1,29 @@
+{
+  "builders": [{
+    "type": "docker",
+    "image": "ubuntu",
+    "commit": true,
+    "changes": [
+      "EXPOSE 4567",
+      "CMD node /home/ubuntu/package/app/bin/www"
+    ]
+  }],
+  "provisioners": [{
+      "type": "shell",
+      "inline": [
+        "sleep 30",
+        "apt-get update",
+        "apt-get install -y curl"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "bundle.tgz",
+      "destination": "/tmp"
+    },
+    {
+      "type": "shell",
+      "script": "./setup/installApp.sh"
+    }
+  ]
+}
