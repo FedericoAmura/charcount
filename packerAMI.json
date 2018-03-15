@@ -1,6 +1,6 @@
 {
   "variables": {
-    "ami_name": "charcount",
+    "ami_name": "charcount"
   },
   "builders": [{
     "type": "amazon-ebs",
